@@ -1,0 +1,84 @@
+{% extends 'main.html' %} 
+{% block content %}
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            
+                <div class="card card-body alert alert-success"><center>General medications and side effects of Malaria</center></div>
+                <b>General Medications</b>
+                
+             <p> Common medications prescribed for Malaria:- 
+1. Arteether
+2.Atremether
+3.Artesunate
+4. Bulaquine
+5.Chloroquine
+6.Mefloquine
+7.Primaquine
+8.Mepacrine
+9.Proguanil 
+10.Tafenoquine
+</p>
+
+ <b>Side effects of general medications are</b>
+                 <p>   1. Arteether can cause cardiac effects such as bradycardia and QT interval prolongation.</p>
+                 <p>2.Artemether side effects include Cough, diarrhea, dizziness, fatigue, headache, joint and muscle pain and stiffness, loss of appetite, nausea, stomach pain, tiredness, trouble in sleeping, vomiting, and weakness.</p>
+                 <p>3.Artesunate side effects include Temporary and reversible anemia, slow heart rate, rash and fever.</p>
+                 <p>4. Chloroquine,mepacrine, mefloquine side effects include
+                     <p>•   Eye and ENT : Vision impairment, deafness, ringing in the ear and ear damage.</p>
+                     <p>•   Musculoskeletal : Nerve disease and muscle weakness.</p>
+                     <p>•   Gastrointestinal : Loss of appetite, nausea, vomiting, diarrhea and abdominal cramps.</p>
+                    <p>•   Skin : Skin eruptions, pigmentation, itching, sensitivity to light, and hair loss.</p>
+                    <p>•   Blood : Anemia, reversible decrease in white blood cells and platelet counts.</p>
+                    <p>•   Central Nervous system : Seizures, headache, emotion, personality changes and depression.</p>              
+                    <p>•   Heart : Low blood pressure.</p>
+
+
+
+                
+            {% if first == 1 %}
+                <div class="card card-body alert alert-danger"><center>Malaria side effects considering cancer as a chronic condition</center></div>
+                <p>1.Researchers have found that the damage to DNA caused by the malaria parasite in cells increases the risk of those cells turning into cancerous cells.
+                <p>2.Side effects of primaquine in Blood: Reduced white blood counts. Hemolysis may occur especially in patients with G6PD enzyme deficiency. The patient may present with yellow discoloration of eyes, dark colored urine, pale lips or skin, shortness of breath, and dizziness. Methemoglobinemia may also occur with symptoms of grayish discoloration of the skin and lips, headache, fatigue and chestpain.
+                </p>
+                <p>3.Proguanil causes Abnormally decrease in white blood cells, and rarely anemia. Decrease in all types of blood cells.</p>
+                    
+            {% endif %}
+            {% if second == 1 %}
+                <div class="card card-body alert alert-danger"><center>Malaria side effects considering Alzheimer's disease as a chronic condition:-</center></div>
+	        <p>1.Chloroquine has some side effects on the Central Nervous system: Seizures, headache, emotion, personality changes and depression.</p>
+            <p>2.Mepacrine Side effect Central Nervous System: Dizziness, headache, central nervous system stimulation and epilepsy.</p>
+            <p>3.Progaunil also can affect the Central Nervous System: Rarely seizures and hallucinations.</p>
+            <p>4.Tafenoquine also affects the Nervous system: Dizziness, headache, weakness, abnormal dreams, anxiety, Inability to sleep.</p>
+
+            {% endif %}
+            {% if third == 1 %}
+                <div class="card card-body alert alert-danger"><center>Malaria side effects considering Heart disease as a chronic condition:-</center></div>
+	            <p>1.Arteether possible side-effects include Cardiac effects such as bradycardia and QT Interval prolongation.</p>
+                <p>2.Chloroquine affects heart by causing low blood presuure.</p>
+                <p>3.Mefloquine also might affect Heart: Circulatory disturbances, chest pain, fast heart rate, palpitations and irregular pulse.</p>
+            {% endif %}
+            {% if fourth == 1 %}
+                <div class="card card-body alert alert-danger"><center>Malaria side effects considering Diabetes as a chronic condition:-</center></div>
+	<p>1.Chloroquine :- Caution should be exercised in patients with a history of blood disease, glucose-6-phosphate dehydrogenase (G-6-PD) deficiency, seizures, stomach problems, liver disease, central nervous system problems, psoriasis, any allergy, who are taking other medications, elderly, children, during pregnancy and breastfeeding.</p>
+    <p>2.Mefloquine :- Caution should be exercised in patients with history of seizures, heart disease, blood clotting problems, liver impairment, sugar, depression, suicidal thoughts, any allergy, who are taking other medications, during pregnancy and breastfeeding. It may cause drowsiness, dizziness, lightheadedness, do not drive a car or operate machinery whiletaking this medication.</p>
+
+            {% endif %}
+            {% if fifth == 1 %}
+                <div class="card card-body alert alert-danger"><center>Malaria side effects considering asthma as a chronic condition:-</center></div>
+                <p>1. Mefloquine can cause respiratory problems such as difficulty in breathing.</p>
+                <p>2. Tafenoquine can cause allergic reactions such as difficulty in breathing.</p>
+            {% endif %}
+            
+            
+            
+            
+            <div class="row"> 
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-primary">Back to Home</a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}

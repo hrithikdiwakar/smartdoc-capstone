@@ -1,0 +1,384 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{% if message %}
+        <div class="alert alert-danger">{{ message }}</div>
+{% endif %}
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <center><h1>General Disease Predictor</h1></center>
+        <div class="card card-body" style="border: 1px solid black;">
+            <form class="form-horizontal" action="{{ url_for('generalPredictionPage') }}" method="POST">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="itching" placeholder="itching"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="itching">
+                                <label for="itching"> Itching</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="chills" placeholder="chills"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="chills">
+                                <label for="chills"> Chills</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="joint_pain" placeholder="joint_pain"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="joint_pain">
+                                <label for="joint_pain"> Joint Pain</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="itching" placeholder="itching"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="vomiting">
+                                <label for="vomiting">Vomiting</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="chills" placeholder="chills"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="fatigue">
+                                <label for="fatigue"> Fatigue</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="joint_pain" placeholder="joint_pain"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="lethargy">
+                                <label for="lethargy">Lethargy</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="itching" placeholder="itching"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="cough">
+                                <label for="cough"> Cough</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="chills" placeholder="chills"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="high_fever">
+                                <label for="high_fever">High Fever</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="joint_pain" placeholder="joint_pain"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="breathlessness">
+                                <label for="breathlessness">Breathlessness</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="itching" placeholder="itching"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="sweating">
+                                <label for="sweating">Sweating</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="chills" placeholder="chills"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="headache">
+                                <label for="headache">Headache</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="joint_pain" placeholder="joint_pain"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="yellowish_skin">
+                                <label for="yellowish_skin">Yellowish Skin</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="itching" placeholder="itching"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="dark_urine">
+                                <label for="dark_urine">dark_urine</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="chills" placeholder="chills"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="nausea">
+                                <label for="nausea">nausea</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="joint_pain" placeholder="joint_pain"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="loss_of_appetite">
+                                <label for="loss_of_appetite">loss_of_appetite</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="itching" placeholder="itching"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="abdominal_pain">
+                                <label for="abdominal_pain">abdominal_pain</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="chills" placeholder="chills"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="diarrhoea">
+                                <label for="diarrhoea">Diarrhoea</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="joint_pain" placeholder="joint_pain"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="mild_fever">
+                                <label for="mild_fever">mild_fever</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="itching" placeholder="itching"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="yellow_urine">
+                                <label for="yellow_urine"> yellow_urine</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="chills" placeholder="chills"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="yellowing_of_eyes">
+                                <label for="yellowing_of_eyes"> yellowing_of_eyes</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="joint_pain" placeholder="joint_pain"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="acute_liver_failure">
+                                <label for="acute_liver_failure"> acute_liver_failure</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="itching" placeholder="itching"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="swelling_of_stomach">
+                                <label for="swelling_of_stomach"> swelling_of_stomach</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="chills" placeholder="chills"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="malaise">
+                                <label for="malaise"> malaise</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="joint_pain" placeholder="joint_pain"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="phlegm">
+                                <label for="phlegm">phlegm</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="itching" placeholder="itching"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="chest_pain">
+                                <label for="chest_pain"> chest_pain</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="chills" placeholder="chills"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="fast_heart_rate">
+                                <label for="fast_heart_rate"> fast_heart_rate</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="joint_pain" placeholder="joint_pain"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="muscle_pain">
+                                <label for="muscle_pain">muscle_pain</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="itching" placeholder="itching"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="family_history">
+                                <label for="family_history"> family_history</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="chills" placeholder="chills"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="rusty_sputum">
+                                <label for="rusty_sputum"> rusty_sputum</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="joint_pain" placeholder="joint_pain"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="receiving_blood_transfusion">
+                                <label for="receiving_blood_transfusion">receiving_blood_transfusion</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="itching" placeholder="itching"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="receiving_unsterile_injections">
+                                <label for="receiving_unsterile_injections"> receiving_unsterile_injections</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="chills" placeholder="chills"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="coma">
+                                <label for="coma"> coma</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="joint_pain" placeholder="joint_pain"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="stomach_bleeding">
+                                <label for="stomach_bleeding">stomach_bleeding</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="itching" placeholder="itching"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="distention_of_abdomen">
+                                <label for="distention_of_abdomen"> distention_of_abdomen</label><br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="itching" placeholder="itching"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="history_of_alcohol_consumption">
+                                <label for="history_of_alcohol_consumption">Alcohol Consumption History</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <!-- <input style="border: 1px solid black;" class="form-control" type="text" name="joint_pain" placeholder="joint_pain"> -->
+                            <div style="border: 1px solid black;" class="form-control">
+                                <input type="checkbox"  name="mycheckbox" value="fluid_overload.1">
+                                <label for="fluid_overload.1">fluid_overload.1</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+
+                <input type="submit" class="btn btn-info btn-block" value="Predict">
+            </form>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+{% endblock %}

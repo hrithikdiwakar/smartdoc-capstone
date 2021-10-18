@@ -1,0 +1,104 @@
+{% extends 'main.html' %} 
+{% block content %}
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            
+                <div class="card card-body alert alert-success"><center>General medications and side effects of Hepatitis</center></div>
+                <b>General Medications</b>
+                
+                <p>Hepatitis A:-
+                    1.Adefovir Dipivoxil
+                    2. Hepatitis A Vaccine</p>
+                <p>Hepatitis B:-
+                    1.Adefovir Dipivoxil
+                    2.Entecavir
+                    3.Haemophilus B Conjugate and Hepatitis B Vaccine
+                    4.Indinavir
+                    5.Interferon Alpha- Two B
+                    6.Lamivudine
+                    7.Telbivudine
+                    8.Thymalfasin
+                    9.Hepatitis B(Recombinant) vaccine</p>
+                <p>Hepatitis C:-
+                    1.Adefovir Dipivoxil
+                    2.Boceprevir
+                    3.Daclatasvir
+                    4.Glecaprevir and Pibrentasvir
+                    5.Interferon Alpha- Two B and Ribavirin
+                    6.Interferon Alpha- 1
+                    7.Interferon Alpha- Two B
+                    8.Ledipasvir and Sofosbuvir
+                    9.Simeprevir
+                    10.Sofosbuvir
+                    11.Sofosbuvir and Velpatasvir
+                    12.Sofosbuvir,Velpatasvir and Voxilaprevir
+                    13.Telaprevir
+                    14.Thymalfasin</p>
+                
+                
+
+                <b>Side effects of general medications are</b>
+                    <p>Most Common: Weakness, headache, abdominal pain, diarrhea, nausea, indigestion, flatulence.
+                        increased creatinine, and decrease in blood phosphate level,dizziness,heartburn,drowsiness and sleep disturbances.</p>
+                    <p>Gastrointestinal: Inflammation of pancreas.. Muscuskeletal: Muscle pain and softening of bones</p>
+                    <p>Genitourinary: Kidney failure and Fanconl syndrome.</p>
+                    <p>Local: Redness, soreness, swelling, redness, or warmth at the injection site and indurations at
+                        injection site</p>
+                        <p>Skin: Itching, rash, redness of the skin, Stevens Johnson syndrome, darkening of skin or nail, hair loss ingrown toenails and nail infection.</p>
+
+                </>
+            {% if first == 1 %}
+                <div class="card card-body alert alert-danger"><center>Side effects considering cancer as a chronic condition</center></div>
+                <p>1.Hepatitis B(Recombinant) vaccine: Blood: Increased erythrocyte sedimentation rate and decrease in platelets.</p>
+                    <p>2.Interferon Alpha two B: Decrease in while blood cells,platelets and anemia.</p>
+                    <p>3.Tymalfasin: Cancer: Non small cell lung cancer,skin cancer.</p>
+            {% endif %}
+            {% if second == 1 %}
+                <div class="card card-body alert alert-danger"><center> Hepatitis side effects considering Alzheimer's disease as a chronic condition</center></div>
+                <p>1.Hepatitis A Vaccine,Indinavir: Central Nervous System: Headache and tiredness</p>
+                <p>2.Haemophilus B Conjugate and Hepatitis B Vaccine: Central Nervous System : Irritability, drowsiness and crying.</p>
+                <p>3.Hepatitis B(Recombinant) vaccine, Interferon Alpha two B,Lamivudine:Central Nervous System Dizziness, headache, multiple sclerosis (MS), nerve disease (including Bells palsy, 
+                    Guillain-Barré syndrome, hypoesthesis, and pareithesia), paralysis and seizures </p>
+                
+                
+            {% endif %}
+            {% if third == 1 %}
+                <div class="card card-body alert alert-danger"><center> Hepatitis  side effects considering Heart disease as a chronic condition</center></div>
+                <p>1. Indinavir : heart : Chest pain, blood supply disorder and heart attack.</p>
+                <p>2.Interferon Alpha- Two B and Ribavirin: Caution should be exercised in patients with history of Heart disease, hogh blood pressure.</p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+            {% endif %}
+            {% if fourth == 1 %}
+                <div class="card card-body alert alert-danger"><center>Hepatitis side effects considering Diabetes as a chronic condition</center></div>
+                <p>1.Indinavir : Blood sugar levels may be affected.</p>
+                <p>2.Lamivudine: It may affect blood sugar level continous monitering of sugar levels should be done.</p>
+                <p>3.Interferon Alpha- Two B and Ribavirin: Caution should be exercised in patients with history of Uncontrolled diabetes.</p>
+                <p></p>
+                <p></p>
+
+            {% endif %}
+            {% if fifth == 1 %}
+                <div class="card card-body alert alert-danger"><center>Hepatitis side effects considering Asthma as a chronic condition</center></div>
+                <p>1.Haemophilus B Conjugate and Hepatitis B Vaccine,Interferon Alpha two B: Upper respiratory infection,runny nose,cough, difficulty in 
+                    breathing and nose inflamation.</p>
+                <p>2.Hepatitis B(Recombinant) vaccine: Respiratory inflammation of pharynx and upper respiratory tract infection 
+                    Miscellaneous Fever and inflammation of blood vessels.hypersensitivity reaction, severe allergic reactions, bronchial spasm, 
+                    chest discomfort, difficulty in breathing.</p>
+                <p>3.Telbivudine,Boceprevir,Sofosbuvir: Respiratory: Cough and throat pain, flu like symptoms.</p>
+                <p></p>
+                <p></p>
+
+            {% endif %}            
+            <div class="row"> 
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-primary">Back to Home</a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}

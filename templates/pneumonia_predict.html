@@ -1,0 +1,77 @@
+{% extends 'main.html' %} 
+{% block content %}
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            {% if pred == 1 %}
+                <div class="card card-body alert alert-danger"><center>This X-Ray is predicted to have Pneumonia.</center></div>
+
+                <div class="card card-body alert "  style = "weight:bold"><center><b>Do you have any chronic illness mentioned below?</b></center></div>
+
+                <form class="form-horizontal" action="{{ url_for('pneumoniaResultPage') }}" method="POST">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                
+                                <div style="border: 1px solid black;" class="form-control">
+                                    <input type="checkbox"  name="mycheckbox" value="cancer">
+                                    <label for="cancer"> Cancer</label><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                
+                                <div style="border: 1px solid black;" class="form-control">
+                                    <input type="checkbox"  name="mycheckbox" value="alzheimer">
+                                    <label for="alzheimer"> Alzheimer's Disease</label><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                
+                                <div style="border: 1px solid black;" class="form-control">
+                                    <input type="checkbox"  name="mycheckbox" value="heart">
+                                    <label for="heart">Heart Disease</label><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                
+                                <div style="border: 1px solid black;" class="form-control">
+                                    <input type="checkbox"  name="mycheckbox" value="diabetes">
+                                    <label for="diabetes"> Diabetes</label><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                
+                                <div style="border: 1px solid black;" class="form-control">
+                                    <input type="checkbox"  name="mycheckbox" value="asthma">
+                                    <label for="asthma"> Asthma</label><br>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <input type="submit" class="btn btn-info btn-block" value="Know Complications">
+                    </form>
+            {% else %}
+                <div class="card card-body alert alert-success"><center>This X-Ray does not have Pneumonia.</center></div>
+                <div class="row"> 
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-primary">Back to Home</a></div>
+                    <div class="col-md-4"></div>
+                </div>
+            {% endif %}
+            
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}

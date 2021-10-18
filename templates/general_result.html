@@ -1,0 +1,50 @@
+{% extends 'main.html' %} 
+{% block content %}
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            
+            {% if pred == "malaria" %}
+                <div class="card card-body alert alert-danger"><center>Malaria</center></div>
+
+                <div class="row"> 
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"><a href="{{ url_for('malariaPage') }}" class="btn btn-block btn-primary" style="width: 300px;">Proceed to confirm Malaria </a></div>
+                    <div class="col-md-4"></div>
+                </div>
+            
+            {% elif pred == "Pneumonia" %}
+                <div class="card card-body alert alert-danger"><center>Pneumonia</center></div>
+                <center>
+                <div class="row"> 
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4"><a href="{{ url_for('pneumoniaPage') }}" class="btn btn-block btn-primary" style="width: 300px;"  >Proceed to confirm Pneumonia</a></div>
+                    <div class="col-md-4"></div>
+                </div>
+            </center>   
+            
+            {% elif pred == "Hepatitis" %}
+                <div class="card card-body alert alert-danger"><center>Hepatitis</center></div>
+                <center>
+                <div class="row"> 
+                    <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <center>
+                                <a href="{{ url_for('hepatitisPage') }}" class="btn btn-block btn-primary"  style="width: 250px;">Proceed to confirm Hepatitis</a>
+                            </center>
+                        </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </center>
+            {% else %}
+                <div class="card card-body alert alert-success"><center> Please provide valid data. </center></div>
+            {% endif %}
+            <!-- <div class="row"> 
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-secondary">Back to Home</a></div>
+                <div class="col-md-4"></div>
+            </div> -->
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}

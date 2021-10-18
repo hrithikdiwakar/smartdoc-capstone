@@ -1,0 +1,106 @@
+{% extends 'main.html' %} 
+{% block content %}
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            
+                <div class="card card-body alert alert-success"><center>General medications and side effects of Pnemonia</center></div>
+                <b>General Medications</b>
+                
+             <p> Common medications prescribed for Pnemonia:- 
+1.Amoxicillin and Bromhexine
+2.Ampicillin and Sulbactam
+3.Atovaquone
+4.Bacampicillin
+5.Balofloxacin
+6.Cefaclor
+7.Cefotaxime
+8.Ceftriaxone
+9.Cephalexin
+10.Cephradine
+11.Cloxacillin
+12.Dicloxacillin
+13.Garenoxacin Mesylate
+14.Gemifloxacin
+15.Grepafloxacin
+16.Minocycline
+17.Moxifloxacin
+18.Ofloxacin
+19.Omadacycline
+20.Pentamidine
+21.Piperacillin/Tazobactam
+22.Primaquine
+23.Sparfloxacin
+24.Tigecycline</p>
+
+ <b>Side effects of general medications are</b>
+                 <p>   1.Common side effects are:-
+Headache, nausea, dizziness, vomiting, abdominal fullness, diarrhea and black hairy tongue.
+Skin: Rash, hives and severe allergic reactions. • Blood: Increased eosinophilia, anemia and decrease in platelets.
+Potentially Fatal: Anaphylaxis, pseudomembranous colitis, acute cytoloytic hepatitis and Stevens Johnson syndrome.
+Gastrointestinal: Upset stomach, abdominal distention, sore throat/mouth, vomiting, gas, nausea, and diarrhea.
+2.Allergic reactions Itching, swelling of the face/hands/feet, difficulty in breathing, mucosal bleeding. dizziness, 
+chest pain, skin rash, unusual bleeding or bruising, sore throat, difficult or painful urination and swollen tongue. 
+3.Respiratory:  Difficulty in breathing and inflammation of nose, Flu like syndrome.
+4.Hypersensitivity: Allergic reactions including hives, fever, joint pains, rashes, angioedema and
+serum sickness-like reactions.</p>
+
+                </>
+            {% if first == 1 %}
+                <div class="card card-body alert alert-danger"><center>Pneumonia side effects considering cancer as a chronic condition</center></div>
+                <p>1.Amoxicillin and Bromhexine:- causes Increased eosinophilia, anemia and decrease in platelets.
+2.Bacampicillin,Cloxacillin,Minocycline : Decrease in blood counts.
+3.Cefaclor,Cephradine,Dicloxacillin: Blood Anemia and decrease in white blood cells and platelets. 
+4.Ceftriaxone: Blood: High concentration of eosinophils, platelet counts in the blood, decrease in white blood cells,
+low prothrombin levels, bleeding.
+5.Moxifloxacin: Blood and Lymphatic System Anemia, eosinophilie, decrease in white blood cells and platelets.</p>
+            {% endif %}
+            {% if second == 1 %}
+                <div class="card card-body alert alert-danger"><center>Pneumonia side effects considering Alzheimer's disease as a chronic condition:-</center></div>
+	<p>1.Ampiicillin and Sulbactam might affect the Central Nervous System: Fatigue and malaise.
+2.Atovaquone: Affects the Central Nervous System Headache, weakness, dizziness, depression, anxiety and sleeplessness.
+3.Balofloxacin: peripheral neuropathy, sensitivity to light, dizziness, fever
+4.Cefaclor affects Central Nervous System Reversible hyperactivity, agitation, nervousness, sleeplessness,confusion, increased muscle tone, dizziness, 
+hallucinations and drowsiness, Liver Elevation in liver enzymes level.
+5.Cloxacillin: Brain: Confusion, lethargy, twitching, seizures
+6.Moxifloxacin: Central Nervous System: Sensory loss, drowsiness, dizziness, tremor, lethargy, tingling, tension,
+headache, fainting, anxiety, confusion, agitation, depression, nervousness, restlessness
+</p>
+            {% endif %}
+            {% if third == 1 %}
+                <div class="card card-body alert alert-danger"><center>Pneumonia side effects considering Heart disease as a chronic condition:-</center></div>
+	<p>1.Cloxacillin:  Cardiovascular system: Low blood pressure 
+2.Gemifloxacin,Grepafloxacin: Prolonged QTc interval on ECG
+3.Moxifloxacin: Heart: Palpitations, fast or slow heart rate, heart failure, high or low blood pressure and chest pain.
+4.Sparfloxacin:Heart: Palpitations, electrocardiogram abnormat, high blood pressure, fast or slow heart rate, chest pain, 
+abnormal heart rhythm, atrial flutter, bleeding, migraine, and low blood pressure.
+</p>
+            {% endif %}
+            {% if fourth == 1 %}
+                <div class="card card-body alert alert-danger"><center>Pneumonia side effects considering Diabetes as a chronic condition:-</center></div>
+	<p>1.Garenoxacin Mesylate: Caution should be exercised in patients with history of convulsive diseases, 
+low blood pressure, abnormal heart rhythm, diabetes, myasthenia gravis, any allergy, who are taking other medications, during pregnancy and breastfeeding.
+2.Pentadamine: Caution should be exercised in patients with history of high/low blood sugar.
+</p>
+            {% endif %}
+            {% if fifth == 1 %}
+                <div class="card card-body alert alert-danger"><center>Pneumonia side effects considering Asthma as a chronic condition:-</center></div>
+<p>1.Ampicillin and Sulbactam: Allergic reactions such as difficulty in breathing.
+2.Atovaquone,Minocycline,Moxifloxacin: Difficulty in breathing and inflammation of nose, Flu like syndrome
+3.Balofloxacin: epilepsy and super added fungal infection, irritation.
+4.Sparfloxacin: Respiratory Asthma, nosebleed, pneumanla, runny nose, inflammation of pharynx, bronchus,
+coughing up blood, sinusitis, cough increased, difficulty in breathing, lung disorder, pleural disorder.</p>
+            {% endif %}
+            
+            
+            
+            
+            <div class="row"> 
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-primary">Back to Home</a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}
