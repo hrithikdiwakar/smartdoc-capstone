@@ -4,7 +4,7 @@
         <div class="col-md-3"></div>
         <div class="col-md-6">
             
-            {% if pred == "malaria" %}
+            {% if pred == "Malaria" %}
                 <div class="card card-body alert alert-danger"><center>Malaria</center></div>
 
                 <div class="row"> 
@@ -36,15 +36,9 @@
                     <div class="col-md-4"></div>
                 </div>
             </center>
-            {% else %}
-                <div class="card card-body alert alert-success"><center> Please provide valid data. </center></div>
-            {% endif %}
-            <!-- <div class="row"> 
-                <div class="col-md-4"></div>
-                <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-secondary">Back to Home</a></div>
-                <div class="col-md-4"></div>
-            </div> -->
+            
         </div>
+        {% endif %}
         <div class="col-md-3"></div>
     </div>
 {% endblock %}

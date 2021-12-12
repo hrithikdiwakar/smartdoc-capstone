@@ -28,12 +28,49 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{url_for('static',filename='css/custom.css')}}">
 
- 
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
 
+	<!-- LOADER -->
+     <!-- <div id="preloader">
+		<div class="loader">
+			<img src="images/preloader.gif" alt="" />
+		</div>
+    </div>end loader -->
+    <!-- END LOADER -->
 	
+	<!-- Start top bar -->
+	<!-- <div class="main-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="left-top">
+						<a class="new-btn-d br-2" href="#"><span>Book Appointment</span></a>
+						<div class="mail-b"><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> demo@gmail.com</a></div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="wel-nots">
+						<p>Welcome to Our Health Lab!</p>
+					</div>
+					<div class="right-top">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<!-- End top bar -->
 	
 	<!-- Start header -->
 	<header class="top-header">
@@ -50,22 +87,16 @@
                         <li><a class="nav-link active" href="/">Home</a></li>
                         <li><a class="nav-link" href="#about">About Us</a></li>
                         <li><a class="nav-link" href="#services">Services</a></li>
-
-						{% if session["usr"] %}
 						<li><a class="nav-link" href="{{ url_for('generalPredictionPage') }}">General Prediction</a></li>
-						
 						<li><a class="nav-link" href="{{ url_for('pneumoniaPage') }}">Pneumonia</a></li>
 						<li><a class="nav-link" href="{{ url_for('malariaPage') }}">Malaria</a></li>
 						
 						<li><a class="nav-link" href="{{ url_for('hepatitisPage') }}">Hepatitis</a></li>
-						<li><a class="nav-link" href="{{ url_for('logout') }}">Logout</a></li>
-						{% endif %}
-
-						{% if not session["usr"] %}
-						<li><a class="nav-link" href="{{ url_for('signin') }}">Sign In</a></li>
-						<li><a class="nav-link" href="{{ url_for('signup') }}">Sign Up</a></li>
-						{% endif %}
-							
+						<li><a class="nav-link" href="{{ url_for('signup') }}">Signup</a></li>
+							<!-- <li><a class="nav-link" href="{{ url_for('newPage')}}">Pneumonia new</a></li>
+							<li><a class="nav-link" href="#team">Doctor</a></li>
+							<li><a class="nav-link" href="#blog">Blog</a></li>
+							<li><a class="nav-link" href="#contact">Contact</a></li> -->
                     </ul>
                 </div>
             </div>
